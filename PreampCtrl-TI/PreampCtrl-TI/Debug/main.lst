@@ -1,0 +1,355 @@
+TMS320C6x Assembler PC v7.4.24 Thu Jul 16 08:42:23 2026
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+main.asm                                                             PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TMS320C6x C/C++ Codegen                                         PC v7.4.24 *
+       3                    ;* Date/Time created: Thu Jul 16 08:42:23 2026                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --c64p_l1d_workaround=default --endian=little --hll_source=on --long
+       6                    
+       7                    ;******************************************************************************
+       8                    ;* GLOBAL FILE PARAMETERS                                                     *
+       9                    ;*                                                                            *
+      10                    ;*   Architecture      : TMS320C67xx                                          *
+      11                    ;*   Optimization      : Disabled                                             *
+      12                    ;*   Optimizing for    : Compile time, Ease of Development                    *
+      13                    ;*                       Based on options: no -o, no -ms                      *
+      14                    ;*   Endian            : Little                                               *
+      15                    ;*   Interrupt Thrshld : Disabled                                             *
+      16                    ;*   Data Access Model : Far                                                  *
+      17                    ;*   Pipelining        : Disabled                                             *
+      18                    ;*   Memory Aliases    : Presume are aliases (pessimistic)                    *
+      19                    ;*   Debug Info        : DWARF Debug                                          *
+      20                    ;*                                                                            *
+      21                    ;******************************************************************************
+      22                    
+      23                            .asg    A15, FP
+      24                            .asg    B14, DP
+      25                            .asg    B15, SP
+      26                            .global $bss
+      27                    
+      28                    
+      29                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+      30                            .dwattr $C$DW$CU, DW_AT_name("../main.c")
+      31                            .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C6x C/C++ Codegen PC v7.4.24 Copyright (c) 1996-201
+      32                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      33                            .dwattr $C$DW$CU, DW_AT_comp_dir("C:\dev\AAX-DSP\PreampCtrl-TI\Debug")
+      34                    ;       C:\ti\ccs1281\ccs\tools\compiler\c6000_7.4.24\bin\acpia6x.exe -@C:\\Users\\User\\AppData\\Loca
+      35 00000000                   .sect   ".text"
+      36                            .clink
+      37                            .global main
+      38                    
+      39                    $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("main")
+      40                            .dwattr $C$DW$1, DW_AT_low_pc(main)
+      41                            .dwattr $C$DW$1, DW_AT_high_pc(0x00)
+      42                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("main")
+      43                            .dwattr $C$DW$1, DW_AT_external
+      44                            .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$10)
+      45                            .dwattr $C$DW$1, DW_AT_TI_begin_file("../main.c")
+      46                            .dwattr $C$DW$1, DW_AT_TI_begin_line(0x06)
+      47                            .dwattr $C$DW$1, DW_AT_TI_begin_column(0x05)
+      48                            .dwattr $C$DW$1, DW_AT_decl_file("../main.c")
+      49                            .dwattr $C$DW$1, DW_AT_decl_line(0x06)
+      50                            .dwattr $C$DW$1, DW_AT_decl_column(0x05)
+      51                            .dwattr $C$DW$1, DW_AT_TI_max_frame_size(0x00)
+      52                            .dwpsn  file "../main.c",line 7,column 1,is_stmt,address main,isa 0
+      53                    
+      54                            .dwfde $C$DW$CIE, main
+      55                    ;----------------------------------------------------------------------
+TMS320C6x Assembler PC v7.4.24 Thu Jul 16 08:42:23 2026
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+main.asm                                                             PAGE    2
+
+      56                    ;   6 | int main(void)                                                         
+      57                    ;----------------------------------------------------------------------
+      58                    
+      59                    ;******************************************************************************
+      60                    ;* FUNCTION NAME: main                                                        *
+      61                    ;*                                                                            *
+      62                    ;*   Regs Modified     : A4                                                   *
+      63                    ;*   Regs Used         : A4,B3                                                *
+      64                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                    *
+      65                    ;******************************************************************************
+      66 00000000           main:
+      67                    ;** --------------------------------------------------------------------------*
+      68                    ;          EXCLUSIVE CPU CYCLES: 7
+      69                            .dwcfi  cfa_offset, 0
+      70                            .dwpsn  file "../main.c",line 8,column 2,is_stmt,isa 0
+      71                    ;----------------------------------------------------------------------
+      72                    ;   8 | return 0;                                                              
+      73                    ;----------------------------------------------------------------------
+      74 00000000 020000F8             ZERO    .L1     A4                ; |8| 
+      75                            .dwpsn  file "../main.c",line 9,column 1,is_stmt,isa 0
+      76                            .dwcfi  cfa_offset, 0
+      77                    $C$DW$2 .dwtag  DW_TAG_TI_branch
+      78                            .dwattr $C$DW$2, DW_AT_low_pc(0x00)
+      79                            .dwattr $C$DW$2, DW_AT_TI_return
+      80 00000004 000C0362             RET     .S2     B3                ; |9| 
+      81 00000008 00008000             NOP             5
+      82                               ; BRANCH OCCURS {B3}              ; |9| 
+      83                            .dwattr $C$DW$1, DW_AT_TI_end_file("../main.c")
+      84                            .dwattr $C$DW$1, DW_AT_TI_end_line(0x09)
+      85                            .dwattr $C$DW$1, DW_AT_TI_end_column(0x01)
+      86                            .dwendentry
+      87                            .dwendtag $C$DW$1
+      88                    
+      89                    
+      90                    ;******************************************************************************
+      91                    ;* BUILD ATTRIBUTES                                                           *
+      92                    ;******************************************************************************
+      93                            .battr "TI", Tag_File, 1, Tag_Long_Precision_Bits(2)
+      94                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+      95                            .battr "TI", Tag_File, 1, Tag_ABI_enum_size(3)
+      96                            .battr "c6xabi", Tag_File, 1, Tag_ABI_wchar_t(1)
+      97                            .battr "c6xabi", Tag_File, 1, Tag_ABI_array_object_alignment(1)
+      98                            .battr "c6xabi", Tag_File, 1, Tag_ABI_array_object_align_expected(1)
+      99                            .battr "c6xabi", Tag_File, 1, Tag_ABI_PIC(0)
+     100                            .battr "c6xabi", Tag_File, 1, Tag_ABI_PID(0)
+     101                            .battr "c6xabi", Tag_File, 1, Tag_ABI_DSBT(0)
+     102                            .battr "c6xabi", Tag_File, 1, Tag_ABI_stack_align_needed(0)
+     103                            .battr "c6xabi", Tag_File, 1, Tag_ABI_stack_align_preserved(0)
+     104                            .battr "TI", Tag_File, 1, Tag_Tramps_Use_SOC(1)
+     105                    
+     106                    ;******************************************************************************
+     107                    ;* TYPE INFORMATION                                                           *
+     108                    ;******************************************************************************
+     109                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     110                            .dwattr $C$DW$T$2, DW_AT_name("void")
+TMS320C6x Assembler PC v7.4.24 Thu Jul 16 08:42:23 2026
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+main.asm                                                             PAGE    3
+
+     111                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     112                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+     113                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+     114                    $C$DW$T$19      .dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
+     115                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$3)
+     116                            .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     117                            .dwattr $C$DW$T$19, DW_AT_decl_file("../main.c")
+     118                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x09)
+     119                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x01)
+     120                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     121                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     122                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     123                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     124                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     125                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     126                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     127                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     128                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     129                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     130                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     131                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     132                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+     133                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     134                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     135                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     136                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+     137                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     138                            .dwattr $C$DW$T$8, DW_AT_name("short")
+     139                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     140                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+     141                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     142                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     143                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     144                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+     145                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     146                            .dwattr $C$DW$T$10, DW_AT_name("int")
+     147                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+     148                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+     149                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     150                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     151                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+     152                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+     153                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     154                            .dwattr $C$DW$T$12, DW_AT_name("__int40_t")
+     155                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x08)
+     156                            .dwattr $C$DW$T$12, DW_AT_bit_size(0x28)
+     157                            .dwattr $C$DW$T$12, DW_AT_bit_offset(0x18)
+     158                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+     159                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     160                            .dwattr $C$DW$T$13, DW_AT_name("unsigned __int40_t")
+     161                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x08)
+     162                            .dwattr $C$DW$T$13, DW_AT_bit_size(0x28)
+     163                            .dwattr $C$DW$T$13, DW_AT_bit_offset(0x18)
+     164                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+     165                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+TMS320C6x Assembler PC v7.4.24 Thu Jul 16 08:42:23 2026
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+main.asm                                                             PAGE    4
+
+     166                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+     167                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+     168                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+     169                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     170                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     171                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+     172                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+     173                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     174                            .dwattr $C$DW$T$16, DW_AT_name("float")
+     175                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+     176                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+     177                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     178                            .dwattr $C$DW$T$17, DW_AT_name("double")
+     179                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+     180                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+     181                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     182                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+     183                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+     184                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     185                    
+     186                    ;***************************************************************
+     187                    ;* DWARF CIE ENTRIES                                           *
+     188                    ;***************************************************************
+     189                    
+     190                    $C$DW$CIE       .dwcie 19
+     191                            .dwcfi  cfa_register, 31
+     192                            .dwcfi  cfa_offset, 0
+     193                            .dwcfi  undefined, 0
+     194                            .dwcfi  undefined, 1
+     195                            .dwcfi  undefined, 2
+     196                            .dwcfi  undefined, 3
+     197                            .dwcfi  undefined, 4
+     198                            .dwcfi  undefined, 5
+     199                            .dwcfi  undefined, 6
+     200                            .dwcfi  undefined, 7
+     201                            .dwcfi  undefined, 8
+     202                            .dwcfi  undefined, 9
+     203                            .dwcfi  same_value, 10
+     204                            .dwcfi  same_value, 11
+     205                            .dwcfi  same_value, 12
+     206                            .dwcfi  same_value, 13
+     207                            .dwcfi  same_value, 14
+     208                            .dwcfi  same_value, 15
+     209                            .dwcfi  undefined, 16
+     210                            .dwcfi  undefined, 17
+     211                            .dwcfi  undefined, 18
+     212                            .dwcfi  undefined, 19
+     213                            .dwcfi  undefined, 20
+     214                            .dwcfi  undefined, 21
+     215                            .dwcfi  undefined, 22
+     216                            .dwcfi  undefined, 23
+     217                            .dwcfi  undefined, 24
+     218                            .dwcfi  undefined, 25
+     219                            .dwcfi  same_value, 26
+     220                            .dwcfi  same_value, 27
+TMS320C6x Assembler PC v7.4.24 Thu Jul 16 08:42:23 2026
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+main.asm                                                             PAGE    5
+
+     221                            .dwcfi  same_value, 28
+     222                            .dwcfi  same_value, 29
+     223                            .dwcfi  same_value, 30
+     224                            .dwcfi  same_value, 31
+     225                            .dwcfi  same_value, 32
+     226                            .dwcfi  undefined, 33
+     227                            .dwcfi  undefined, 34
+     228                            .dwcfi  undefined, 35
+     229                            .dwcfi  undefined, 36
+     230                            .dwcfi  undefined, 37
+     231                            .dwcfi  undefined, 38
+     232                            .dwcfi  undefined, 39
+     233                            .dwcfi  undefined, 40
+     234                            .dwcfi  undefined, 41
+     235                            .dwcfi  undefined, 42
+     236                            .dwcfi  undefined, 43
+     237                            .dwcfi  undefined, 44
+     238                            .dwcfi  undefined, 45
+     239                            .dwcfi  undefined, 46
+     240                            .dwcfi  undefined, 47
+     241                            .dwcfi  undefined, 48
+     242                            .dwcfi  undefined, 49
+     243                            .dwcfi  undefined, 50
+     244                            .dwcfi  undefined, 51
+     245                            .dwcfi  undefined, 52
+     246                            .dwcfi  undefined, 53
+     247                            .dwcfi  undefined, 54
+     248                            .dwcfi  undefined, 55
+     249                            .dwcfi  undefined, 56
+     250                            .dwcfi  undefined, 57
+     251                            .dwcfi  undefined, 58
+     252                            .dwcfi  undefined, 59
+     253                            .dwcfi  undefined, 60
+     254                            .dwcfi  undefined, 61
+     255                            .dwcfi  undefined, 62
+     256                            .dwcfi  undefined, 63
+     257                            .dwcfi  undefined, 64
+     258                            .dwcfi  undefined, 65
+     259                            .dwcfi  undefined, 66
+     260                            .dwcfi  undefined, 67
+     261                            .dwcfi  undefined, 68
+     262                            .dwcfi  undefined, 69
+     263                            .dwcfi  undefined, 70
+     264                            .dwcfi  undefined, 71
+     265                            .dwcfi  undefined, 72
+     266                            .dwcfi  undefined, 73
+     267                            .dwcfi  undefined, 74
+     268                            .dwcfi  undefined, 75
+     269                            .dwcfi  undefined, 76
+     270                            .dwcfi  undefined, 77
+     271                            .dwcfi  undefined, 78
+     272                            .dwcfi  undefined, 79
+     273                            .dwcfi  undefined, 80
+     274                            .dwcfi  undefined, 81
+     275                            .dwcfi  undefined, 82
+TMS320C6x Assembler PC v7.4.24 Thu Jul 16 08:42:23 2026
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+main.asm                                                             PAGE    6
+
+     276                            .dwcfi  undefined, 83
+     277                            .dwcfi  undefined, 84
+     278                            .dwcfi  undefined, 85
+     279                            .dwcfi  undefined, 86
+     280                            .dwcfi  undefined, 87
+     281                            .dwcfi  undefined, 88
+     282                            .dwcfi  undefined, 89
+     283                            .dwcfi  undefined, 90
+     284                            .dwcfi  undefined, 91
+     285                            .dwcfi  undefined, 92
+     286                            .dwcfi  undefined, 93
+     287                            .dwcfi  undefined, 94
+     288                            .dwcfi  undefined, 95
+     289                            .dwcfi  undefined, 96
+     290                            .dwcfi  undefined, 97
+     291                            .dwcfi  undefined, 98
+     292                            .dwcfi  undefined, 99
+     293                            .dwcfi  undefined, 100
+     294                            .dwcfi  undefined, 101
+     295                            .dwcfi  undefined, 102
+     296                            .dwcfi  undefined, 103
+     297                            .dwcfi  undefined, 104
+     298                            .dwcfi  undefined, 105
+     299                            .dwcfi  undefined, 106
+     300                            .dwcfi  undefined, 107
+     301                            .dwcfi  undefined, 108
+     302                            .dwcfi  undefined, 109
+     303                            .dwcfi  undefined, 110
+     304                            .dwcfi  undefined, 111
+     305                            .dwcfi  undefined, 112
+     306                            .dwcfi  undefined, 113
+     307                            .dwcfi  undefined, 114
+     308                            .dwcfi  undefined, 115
+     309                            .dwcfi  undefined, 116
+     310                            .dwcfi  undefined, 117
+     311                            .dwcfi  undefined, 118
+     312                            .dwcfi  undefined, 119
+     313                            .dwcfi  undefined, 120
+     314                            .dwcfi  undefined, 121
+     315                            .dwcfi  undefined, 122
+     316                            .dwcfi  undefined, 123
+     317                            .dwcfi  undefined, 124
+     318                            .dwcfi  undefined, 125
+     319                            .dwcfi  undefined, 126
+     320                            .dwcfi  undefined, 127
+     321                            .dwendentry
+     322                            .dwendtag $C$DW$CU
+     323                    
+
+No Assembly Errors, No Assembly Warnings
